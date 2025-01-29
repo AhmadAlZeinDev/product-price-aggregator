@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F7c6642d9d9b75e2090693773e3c470fa.cdn.bubble.io%2Ff1704517099894x454130768036798700%2FGroup%252053632.png?w=256&h=54&auto=compress&dpr=1.25&fit=max" width="200" alt="Digital Zone Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">Product Price Aggregator with NestJS and Prisma</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -32,6 +32,29 @@
 $ npm install
 ```
 
+## JSON Server
+
+```bash
+# unit tests
+$ npm install -g json-server
+$ json-server --watch data/primary-products.json --port 8001
+$ json-server --watch data/secondary-products.json --port 8002
+$ json-server --watch data/tertiary-products.json --port 8003
+```
+
+## Prisma
+
+```bash
+# Generate Prisma Client
+$ npx prisma generate
+
+# For Dev
+$ npx prisma migrate dev
+
+# For Production
+$ npx prisma migrate deploy
+```
+
 ## Running the app
 
 ```bash
@@ -43,6 +66,9 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
+# swagger
+$ http://localhost:7777/api/swagger
 ```
 
 ## Test
@@ -50,23 +76,18 @@ $ npm run start:prod
 ```bash
 # unit tests
 $ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
 
 ## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+For any further questions or clarifications, please contact me by:
+Email: ahmadalzein267@gmail.com
+Or
+Mobile Number: +971547551927
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Ahmad Al-Zein](https://www.linkedin.com/in/ahmad-al-zein)
 
 ## License
 

@@ -1,14 +1,21 @@
 import { HttpException, HttpStatus, Injectable, Logger } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
 import { Provider } from '@prisma/client';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 
 @Injectable()
 export class CronProductService {
   private readonly logger = new Logger('CronProduct');
   constructor(private prisma: PrismaService) {}
 
-  // Cron Job to sync products will run every 15 minutes
+  // Cron Job to sync products will run every 15 minutes (I chose this duration for testing)
+  // I want to mention here that I went with Cron Job solutions to handle data freshness
+  // for performance reasons that we can discuss about it
+  // Is this best technique ? from my point-of-view yes, but needs some enhancements
+  // Like we should have socket to handle the data updates so in this case we can update in real time
+  // instead of updating after specific time
+  // And we can use webhooks so in this case instead of keeping real time connection and handling
+  // the connection fails, the external providers can call this webhooks to update data
   @Cron('0 */15 * * * *')
   async syncProducts() {
     try {
