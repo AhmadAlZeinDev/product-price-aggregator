@@ -10,21 +10,14 @@ services:
       - primary-json-server
       - secondary-json-server
       - tertiary-json-server
-    environment:
-      DATABASE_URL: "postgresql://postgres:ahmad9510@db:5432/digital-zone?schema=public"
-      PRIMARY_PROVIDER_BASE_URL: "http://primary-json-server:80"
-      SECONDARY_PROVIDER_BASE_URL: "http://secondary-json-server:80"
-      TERTIARY_PROVIDER_BASE_URL: "http://tertiary-json-server:80"
-      CHANGES_INTERVAL: 120
-      ENV: "DEV"
+    env_file:
+      - .env
     command: ["npm", "run", "start:prod"]
 
   db:
     image: postgres:13
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: ahmad9510
-      POSTGRES_DB: digital-zone
+    env_file:
+      - .env
     ports:
       - '5432:5432'
 
