@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - '7777:7777'
+    depends_on:
+      - db
+      - primary-json-server
+      - secondary-json-server
+      - tertiary-json-server
+    environment:
+      DATABASE_URL: "postgresql://postgres:ahmad9510@db:5432/digital-zone?schema=public"
+      PRIMARY_PROVIDER_BASE_URL: "http://primary-json-server:80"
+      SECONDARY_PROVIDER_BASE_URL: "http://secondary-json-server:80"
+      TERTIARY_PROVIDER_BASE_URL: "http://tertiary-json-server:80"
+      CHANGES_INTERVAL: 120
+      ENV: "DEV"
+    command: ["npm", "run", "start:prod"]
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ahmad9510
+      POSTGRES_DB: digital-zone
+    ports:
+      - '5432:5432'
+
+  primary-json-server:
+    image: clue/json-server
+    volumes:
+      - ./primary-products.json:/data/primary-products.json
+    ports:
+      - '8001:80'
+
+  secondary-json-server:
+    image: clue/json-server
+    volumes:
+      - ./secondary-products.json:/data/secondary-products.json
+    ports:
+      - '8002:80'
+
+  tertiary-json-server:
+    image: clue/json-server
+    volumes:
+      - ./tertiary-products.json:/data/tertiary-products.json
+    ports:
+      - '8003:80'

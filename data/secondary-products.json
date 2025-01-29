@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": 101,
+      "name": "Introduction to Python",
+      "description": "Learn the basics of Python programming.",
+      "price": 14.99,
+      "currency": "GBP",
+      "availability": "in_stock",
+      "updatedAt": "2025-01-28T16:01:00Z"
+    },
+    {
+      "id": 102,
+      "name": "Advanced JavaScript",
+      "description": "Explore advanced JavaScript concepts.",
+      "price": 24.99,
+      "currency": "USD",
+      "availability": "out_of_stock",
+      "updatedAt": "2025-01-28T16:01:00Z"
+    },
+    {
+      "id": 103,
+      "name": "Data Structures in Java",
+      "description": "Understand data structures with Java.",
+      "price": 34.99,
+      "currency": "INR",
+      "availability": "limited",
+      "updatedAt": "2025-01-28T16:01:00Z"
+    }
+  ]
+}

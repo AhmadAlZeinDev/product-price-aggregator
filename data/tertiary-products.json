@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "React for Beginners",
+      "description": "Learn how to build interactive UIs with React.",
+      "price": 9.99,
+      "currency": "USD",
+      "availability": "in_stock",
+      "updatedAt": "2025-01-28T16:02:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Cloud Computing Basics",
+      "description": "An introduction to cloud platforms and services.",
+      "price": 19.99,
+      "currency": "EUR",
+      "availability": "pre_order",
+      "updatedAt": "2025-01-28T16:02:00Z"
+    },
+    {
+      "id": 3,
+      "name": "AI and Machine Learning",
+      "description": "Learn the fundamentals of AI and ML.",
+      "price": 49.99,
+      "currency": "USD",
+      "availability": "in_stock",
+      "updatedAt": "2025-01-28T16:02:00Z"
+    }
+  ]
+}
