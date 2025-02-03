@@ -35,7 +35,7 @@ $ npm install
 ## JSON Server
 
 ```bash
-# unit tests
+# Mock Servers
 $ npm install -g json-server
 $ json-server --watch data/primary-products.json --port 8001
 $ json-server --watch data/secondary-products.json --port 8002
