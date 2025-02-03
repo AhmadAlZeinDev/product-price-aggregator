@@ -68,7 +68,7 @@ $ npm run start:dev
 $ npm run start:prod
 
 # swagger
-$ http://localhost:7777/api/swagger
+$ http://localhost:PORT/api/swagger
 ```
 
 ## Test
