@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F7c6642d9d9b75e2090693773e3c470fa.cdn.bubble.io%2Ff1704517099894x454130768036798700%2FGroup%252053632.png?w=256&h=54&auto=compress&dpr=1.25&fit=max" width="200" alt="Digital Zone Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
